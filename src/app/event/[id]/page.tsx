@@ -10,13 +10,12 @@ import { events } from "@/lib/data"
 import { formatDateRange } from "@/lib/utils"
 
 interface EventDetailPageProps {
-  params: {
-    id: string
-  }
+  params: Promise<{ id: string }>
 }
 
-export default function EventDetailPage({ params }: EventDetailPageProps) {
-  const event = events.find((e) => e.id === params.id)
+export default async function EventDetailPage({ params }: EventDetailPageProps) {
+  const { id } = await params
+  const event = events.find((e) => e.id === id)
 
   if (!event) {
     notFound()
