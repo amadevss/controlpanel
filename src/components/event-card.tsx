@@ -20,7 +20,7 @@ export function EventCard({ event, viewMode = "grid" }: EventCardProps) {
       <Card className="overflow-hidden hover:shadow-md transition-shadow duration-200">
         <div className="flex">
           <div className="relative w-32 h-24 flex-shrink-0">
-            <Image src={event.imageUrl || "/placeholder.svg"} alt={event.title} fill className="object-cover" />
+            <Image src={event.imageUrl || "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=300&fit=crop"} alt={event.title} fill className="object-cover" />
             <div className="absolute top-2 left-2">
               {event.isFree ? (
                 <Badge variant="secondary" className="text-xs">
@@ -74,7 +74,7 @@ export function EventCard({ event, viewMode = "grid" }: EventCardProps) {
     <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 group">
       <div className="relative aspect-video">
         <Image
-          src={event.imageUrl || "/placeholder.svg"}
+          src={event.imageUrl || "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop"}
           alt={event.title}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-300"

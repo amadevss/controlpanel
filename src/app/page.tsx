@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main className="w-full py-8 px-12 border-4 border-red-500">
+      <main className="w-full py-8 px-12">
         <EventFeed />
       </main>
     </div>
